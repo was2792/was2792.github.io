@@ -1,0 +1,104 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="blognode.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<title>Alex's Blog</title>
+</head>
+
+<body>
+<div class="container">
+<div class="jumbotron">
+  <h1>Alex's Blog</h1>
+  <p>Welcome to my blog where you can learn anything and everything<br>about the wonderful world of Node.js!</p>
+  <p><a class="btn btn-primary btn-lg" href="https://www.airpair.com/javascript/node-js-tutorial" role="button">Read more on NodeJS</a></p>
+</div>
+
+<div class="row">
+	<div class="col-md-8" id="special"><h2>What makes NodeJs so cool?</h2>
+<p>Node markets itself as an asynchronous, event-driven framework built on top of Chrome's JavaScript engine and designed for creating scalable network applications. It's basically JavaScript plus a bunch of C/C++ under the hood for things like interacting with the filesystem, starting up HTTP or TCP servers and so on.</p>
+</div>
+	<div class="col-md-4" id="choose"><h2>Why NodeJS?</h2>
+<p>Node is single-threaded and uses a concurrency model based on an event loop. It is non-blocking, so it doesn't make the program wait, but instead it registers a callback and lets the program continue. This means it can handle concurrent operations without multiple threads of execution, so it can scale pretty well.</p>
+</div>
+</div>
+<div class="row">
+	<div class="col-md-12"><h1>Read more on Node JS</h1>
+	</div>
+</div>
+
+<div class="row" id="noderow">
+	
+	<div class="col-md-12" id="node"><h2>NodeJS examples</h2>
+	<p>In a sequential language such as PHP, in order to get the HTML content of a page you would do the following:<br> <br> $response = file_get_contents("http://example.com");
+print_r($response);</p>
+</div>
+</div>
+
+<div class="row" id="noderow">
+	<div class="col-md-12" id="node"><p><h2>In Node, you register some callbacks instead:</h2>var http = require('http');
+
+http.request({ hostname: 'example.com' }, function(res) {<br>
+  res.setEncoding('utf8');<br>
+  res.on('data', function(chunk) {<br>
+    console.log(chunk);<br>
+  });<br>
+}).end();<br>
+</div>
+	</div>
+
+<div class="row" id="controllers">
+	
+	<div class="col-md-12" id="node"><h2>Installing Node.js and NPM</h2>
+	<p>There are native installers for Node on Windows and OS X, as well as the possibility of installing it via a package manager.
+
+<br>However sometimes you will want to test your code with different Node versions, and that's where NVM (Node version manager) comes in.<br>With NVM you can have multiple versions of Node installed on your system and switch between them easily. In the next few lines we are going to see how to install NVM on an Ubuntu system.
+<br><br> </p>
+</div>
+</div>
+
+
+<div class="row" id="controllers">
+<div class="col-md-6"><h2>First, we have to make sure our system has a C++ compiler:</h2>
+	<p>$ sudo apt-get update<br>
+$ sudo apt-get install build-essential libssl-dev<br>
+}</p>
+	</div>
+	<div class="col-md-6"><h2>After that we can copy-paste the one-line installer for NVM into the terminal:</h2><br>
+	<p>$ curl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash<br></p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8" id="objects"><h2>Node Fundamentals</h2>
+	<p>Main Node.js concepts:<br>
+How to include external libraries by requiring modules<br>
+The role of callbacks<br>
+The EventEmitter pattern<br>
+Streams data one chunk at a time<br>
+
+</p>
+	</div>
+	<div class="col-md-4" id="expressions"><h2>Modules</h2>
+	<p>Java or Python use the import function to load other libraries, while PHP and Ruby use require. Node implements the CommonJS interface for modules. In Node you can also load other depencies using the require keyword.</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-4" id="databinding"><h2>Callbacks</h2>
+	<p>In asynchronous programming we do not return values when our functions are done, instead we use the continuation-passing style.
+With this style, an asynchronous function invokes a callback (a function usually passed as the last argument) to continue the program once the it has finished.</p>
+	</div>
+	<div class="col-md-8" id="modules"><h2> Events</h2>
+	<p>The standard callback pattern works well for the use cases where we want to be notified when the async function finishes. However, there are situations that require being notified of different events that do not occur at the same time.
+    </p>
+	</div>
+	</div>
+
+
+
+
+
+
+</div>
+</body>
+</html>
